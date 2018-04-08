@@ -1,6 +1,7 @@
 body {
     box-sizing: border-box;
-    background: gray;
+    background: lightblue;
+    font-size: 20px;
 }
 
 .crystals {
@@ -40,6 +41,22 @@ img {
     height: 200px;
     border: 1px blue solid;
     background: orange;
+}
+
+
+/*Intro Div*/
+
+#intro {
+    width: auto;
+    height: 200px;
+    background: yellow;
+    border: 1px solid purple;
+}
+h2{
+    text-align: center;
+}
+li {
+    margin-left: 40px;
 }
 
 
