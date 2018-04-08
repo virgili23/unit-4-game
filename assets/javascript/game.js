@@ -11,8 +11,8 @@
 
 
 var random_result;
-var lost=0;
-var win=0;
+var loss=0;
+var wins=0;
 var previous = 0;
 
 // Start Game Function
@@ -21,14 +21,18 @@ var startGame = function () {
 
     $(".crystals").empty();
 
-    var images = ["../images/sapphire.jpg", "../images/emerald.jpg", "../images/ruby.png", "../images/purple.jpg"];
+    var images = ['../images/sapphire.jpg', 
+    //"../images/emerald.jpg", 
+    'http://via.placeholder.com/150x150',
+    '../images/ruby.png', 
+    '../images/purple.jpg'];
    
     // Generate a number between 19 and 120
     random_result = Math.floor(Math.random() * 102) + 19;
     console.log(random_result);
 
     // Paste the result into the <p> element I made in html
-    $("#result").html('Match This! ' + random_result);
+    $("#result").html('Try to Match: ' + random_result);
 
     // A generic for loop that does 4 times whatever I put inside this function
     for(var i=0; i < 4; i++) {
@@ -41,8 +45,9 @@ var startGame = function () {
                 "class": 'crystal',
                 "data-random": random
             });
+    // Trying to code different images in the arrays below
             crystal.css({
-                "background-image": "url('" + images[i] + "')", 
+                "background-image": "url('" + images[i] + "');", 
                 "background-size": "cover"
 
             });
@@ -78,9 +83,9 @@ $(document).on('click', ".crystal", function () {
 
         //console.log("you suck!");
 
-        lost++;
+        loss++;
 
-        $("#lost").html("Losses: " + lost);
+        $("#lost").html("Losses: " + loss);
 
         previous = 0;
 
@@ -91,9 +96,9 @@ $(document).on('click', ".crystal", function () {
 
       //  console.log("You won!");
 
-        win++;
+        wins++;
 
-        $("#win").html("Wins: "+ win);
+        $("#win").html("Wins: "+ wins);
 
         previous = 0;
 

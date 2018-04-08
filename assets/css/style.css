@@ -14,6 +14,8 @@ body {
     border: 1px solid green;
     height: 200px;
     width: 200px;
+  /*  background-image: url("http://via.placeholder.com/150x150");*/
+    
     
 }
 .crystal:hover {
@@ -28,6 +30,7 @@ h1 {
     text-align: center;
     background:orange;
     padding: 30px;
+    margin-top: 0px;
     
 }
 
@@ -41,6 +44,7 @@ img {
     height: 200px;
     border: 1px blue solid;
     background: orange;
+    margin-top: -10px;
 }
 
 
@@ -48,9 +52,10 @@ img {
 
 #intro {
     width: auto;
-    height: 200px;
+    height: 180px;
     background: yellow;
     border: 1px solid purple;
+    margin-top: -35px;
 }
 h2{
     text-align: center;
